@@ -1,0 +1,348 @@
+2026-05-09 17:15:08,624 - discord.client - INFO - logging in using static token
+2026-05-09 17:15:10,045 - __main__ - INFO - Loading extensions...
+2026-05-09 17:15:17,240 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 17:15:17,240 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 17:15:19,538 - wavelink.websocket - WARNING - An unexpected error occurred while connecting Node(identifier=2FaWqYpoST1nFEF9, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) to Lavalink: "Cannot connect to host localhost:2333 ssl:default [Удаленный компьютер отклонил это сетевое подключение]"
+If this error persists or wavelink is unable to reconnect, please see: https://github.com/PythonistaGuild/Wavelink/issues
+2026-05-09 17:15:19,539 - wavelink.websocket - INFO - Node(identifier=2FaWqYpoST1nFEF9, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) retrying websocket connection in "0.38698096942477833" seconds.
+2026-05-09 17:15:22,250 - wavelink.websocket - WARNING - An unexpected error occurred while connecting Node(identifier=2FaWqYpoST1nFEF9, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) to Lavalink: "Cannot connect to host localhost:2333 ssl:default [Удаленный компьютер отклонил это сетевое подключение]"
+If this error persists or wavelink is unable to reconnect, please see: https://github.com/PythonistaGuild/Wavelink/issues
+2026-05-09 17:15:22,251 - wavelink.websocket - INFO - Node(identifier=2FaWqYpoST1nFEF9, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) retrying websocket connection in "3.512115719717195" seconds.
+2026-05-09 17:15:28,076 - wavelink.websocket - WARNING - An unexpected error occurred while connecting Node(identifier=2FaWqYpoST1nFEF9, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) to Lavalink: "Cannot connect to host localhost:2333 ssl:default [Удаленный компьютер отклонил это сетевое подключение]"
+If this error persists or wavelink is unable to reconnect, please see: https://github.com/PythonistaGuild/Wavelink/issues
+2026-05-09 17:15:28,077 - wavelink.websocket - INFO - Node(identifier=2FaWqYpoST1nFEF9, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) retrying websocket connection in "11.857350006034101" seconds.
+2026-05-09 17:15:42,224 - wavelink.websocket - WARNING - An unexpected error occurred while connecting Node(identifier=2FaWqYpoST1nFEF9, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) to Lavalink: "Cannot connect to host localhost:2333 ssl:default [Удаленный компьютер отклонил это сетевое подключение]"
+If this error persists or wavelink is unable to reconnect, please see: https://github.com/PythonistaGuild/Wavelink/issues
+2026-05-09 17:15:42,224 - wavelink.websocket - INFO - Node(identifier=2FaWqYpoST1nFEF9, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) retrying websocket connection in "13.512436177003604" seconds.
+2026-05-09 17:15:58,061 - wavelink.websocket - WARNING - An unexpected error occurred while connecting Node(identifier=2FaWqYpoST1nFEF9, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) to Lavalink: "Cannot connect to host localhost:2333 ssl:default [Удаленный компьютер отклонил это сетевое подключение]"
+If this error persists or wavelink is unable to reconnect, please see: https://github.com/PythonistaGuild/Wavelink/issues
+2026-05-09 17:15:58,062 - wavelink.websocket - INFO - Node(identifier=2FaWqYpoST1nFEF9, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) retrying websocket connection in "27.51214523027732" seconds.
+2026-05-09 17:15:59,247 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 17:18:55,771 - discord.client - INFO - logging in using static token
+2026-05-09 17:18:56,618 - __main__ - INFO - Loading extensions...
+2026-05-09 17:18:56,879 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 17:18:56,880 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 17:18:57,251 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 17:18:57,252 - __main__ - INFO - Music cog loaded.
+2026-05-09 17:18:57,252 - __main__ - INFO - Syncing slash commands...
+2026-05-09 17:18:57,649 - __main__ - INFO - Slash commands synced.
+2026-05-09 17:18:58,560 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 03e569570666ec450f416a44e18a1c0b).
+2026-05-09 17:19:00,565 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 17:19:00,566 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 17:19:00,566 - __main__ - INFO - Bot is ready!
+2026-05-09 17:20:34,763 - cogs.music - ERROR - Error in play command: 'Guild' object has no attribute 'connect'
+2026-05-09 17:20:53,931 - cogs.music - ERROR - Error in play command: 'Guild' object has no attribute 'connect'
+2026-05-09 17:22:22,876 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 17:24:23,961 - discord.client - INFO - logging in using static token
+2026-05-09 17:24:24,654 - __main__ - INFO - Loading extensions...
+2026-05-09 17:24:24,913 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 17:24:24,914 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 17:24:25,032 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 17:24:25,032 - __main__ - INFO - Music cog loaded.
+2026-05-09 17:24:25,033 - __main__ - INFO - Syncing slash commands...
+2026-05-09 17:24:25,413 - __main__ - INFO - Slash commands synced.
+2026-05-09 17:24:26,134 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: badce9b02e14ec5e695bf23fff8998ae).
+2026-05-09 17:24:28,149 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 17:24:28,150 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 17:24:28,150 - __main__ - INFO - Bot is ready!
+2026-05-09 17:25:24,525 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 17:32:48,223 - discord.client - INFO - logging in using static token
+2026-05-09 17:32:49,106 - __main__ - INFO - Loading extensions...
+2026-05-09 17:32:49,395 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 17:32:49,395 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 17:32:51,735 - wavelink.websocket - WARNING - An unexpected error occurred while connecting Node(identifier=BRYyUL9dFUAd21hy, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) to Lavalink: "Cannot connect to host localhost:2333 ssl:default [Удаленный компьютер отклонил это сетевое подключение]"
+If this error persists or wavelink is unable to reconnect, please see: https://github.com/PythonistaGuild/Wavelink/issues
+2026-05-09 17:32:51,735 - wavelink.websocket - INFO - Node(identifier=BRYyUL9dFUAd21hy, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) retrying websocket connection in "1.8695030246538846" seconds.
+2026-05-09 17:32:55,951 - wavelink.websocket - WARNING - An unexpected error occurred while connecting Node(identifier=BRYyUL9dFUAd21hy, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) to Lavalink: "Cannot connect to host localhost:2333 ssl:default [Удаленный компьютер отклонил это сетевое подключение]"
+If this error persists or wavelink is unable to reconnect, please see: https://github.com/PythonistaGuild/Wavelink/issues
+2026-05-09 17:32:55,952 - wavelink.websocket - INFO - Node(identifier=BRYyUL9dFUAd21hy, uri=http://localhost:2333, status=NodeStatus.CONNECTING, players=0) retrying websocket connection in "5.424575320852665" seconds.
+2026-05-09 17:33:01,356 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 17:33:01,388 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x0000017F82090440>
+2026-05-09 17:33:31,840 - discord.client - INFO - logging in using static token
+2026-05-09 17:33:32,592 - __main__ - INFO - Loading extensions...
+2026-05-09 17:33:32,855 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 17:33:32,855 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 17:33:32,981 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 17:33:32,981 - __main__ - INFO - Music cog loaded.
+2026-05-09 17:33:32,981 - __main__ - INFO - Syncing slash commands...
+2026-05-09 17:33:33,225 - __main__ - INFO - Slash commands synced.
+2026-05-09 17:33:34,021 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 98cea2b4ebc9c649c95e2f1f68fca4ce).
+2026-05-09 17:33:36,038 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 17:33:36,038 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 17:33:36,039 - __main__ - INFO - Bot is ready!
+2026-05-09 17:36:43,587 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 17:47:15,701 - discord.client - INFO - logging in using static token
+2026-05-09 17:47:16,546 - __main__ - INFO - Loading extensions...
+2026-05-09 17:47:20,750 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 17:47:20,750 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 17:47:21,190 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 17:47:21,190 - __main__ - INFO - Music cog loaded.
+2026-05-09 17:47:21,190 - __main__ - INFO - Syncing slash commands...
+2026-05-09 17:47:21,440 - __main__ - INFO - Slash commands synced.
+2026-05-09 17:47:22,226 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 3272598465700178e39ac7ab988f845a).
+2026-05-09 17:47:24,241 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 17:47:24,242 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 17:47:24,242 - __main__ - INFO - Bot is ready!
+2026-05-09 17:54:49,787 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 17:55:14,199 - discord.client - INFO - logging in using static token
+2026-05-09 17:55:15,092 - __main__ - INFO - Loading extensions...
+2026-05-09 17:55:19,177 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 17:55:19,177 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 17:55:19,183 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 17:55:19,184 - __main__ - INFO - Music cog loaded.
+2026-05-09 17:55:19,184 - __main__ - INFO - Syncing slash commands...
+2026-05-09 17:55:19,456 - __main__ - INFO - Slash commands synced.
+2026-05-09 17:55:20,457 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 25ea9be27721d74120b13641f730f8ac).
+2026-05-09 17:55:22,479 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 17:55:22,479 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 17:55:22,479 - __main__ - INFO - Bot is ready!
+2026-05-09 17:58:49,138 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 17:59:09,195 - discord.client - INFO - logging in using static token
+2026-05-09 17:59:10,112 - __main__ - INFO - Loading extensions...
+2026-05-09 17:59:14,147 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 17:59:14,147 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 17:59:14,195 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 17:59:14,195 - __main__ - INFO - Music cog loaded.
+2026-05-09 17:59:14,196 - __main__ - INFO - Syncing slash commands...
+2026-05-09 17:59:14,430 - __main__ - INFO - Slash commands synced.
+2026-05-09 17:59:15,071 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 957203927e589e549d674df418dda1f2).
+2026-05-09 17:59:17,074 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 17:59:17,074 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 17:59:17,075 - __main__ - INFO - Bot is ready!
+2026-05-09 18:01:32,349 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 18:01:36,767 - discord.client - INFO - logging in using static token
+2026-05-09 18:01:37,528 - __main__ - INFO - Loading extensions...
+2026-05-09 18:01:37,772 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 18:01:37,772 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 18:01:37,778 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 18:01:37,778 - __main__ - INFO - Music cog loaded.
+2026-05-09 18:01:37,778 - __main__ - INFO - Syncing slash commands...
+2026-05-09 18:01:38,066 - __main__ - INFO - Slash commands synced.
+2026-05-09 18:01:39,020 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 28316ee5408e27cb47a2e1fee7e587af).
+2026-05-09 18:01:41,025 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 18:01:41,026 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 18:01:41,026 - __main__ - INFO - Bot is ready!
+2026-05-09 18:03:44,304 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 18:04:25,091 - discord.client - INFO - logging in using static token
+2026-05-09 18:04:25,909 - __main__ - INFO - Loading extensions...
+2026-05-09 18:04:30,054 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 18:04:30,055 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 18:04:30,370 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 18:04:30,370 - __main__ - INFO - Music cog loaded.
+2026-05-09 18:04:30,370 - __main__ - INFO - Syncing slash commands...
+2026-05-09 18:04:30,834 - __main__ - INFO - Slash commands synced.
+2026-05-09 18:04:31,518 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 82ebba27e783a73bc7ac6e87f6e8712e).
+2026-05-09 18:04:33,524 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 18:04:33,525 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 18:04:33,525 - __main__ - INFO - Bot is ready!
+2026-05-09 18:05:40,016 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 18:07:47,772 - discord.client - INFO - logging in using static token
+2026-05-09 18:07:48,474 - __main__ - INFO - Loading extensions...
+2026-05-09 18:07:48,876 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 18:07:48,877 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 18:07:48,999 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 18:07:48,999 - __main__ - INFO - Music cog loaded.
+2026-05-09 18:07:49,000 - __main__ - INFO - Syncing slash commands...
+2026-05-09 18:07:49,343 - __main__ - INFO - Slash commands synced.
+2026-05-09 18:07:50,141 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: b9313bd21769092e29f2deaba0928300).
+2026-05-09 18:07:52,166 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 18:07:52,167 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 18:07:52,167 - __main__ - INFO - Bot is ready!
+2026-05-09 18:08:45,210 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 18:14:14,879 - discord.client - INFO - logging in using static token
+2026-05-09 18:14:15,655 - __main__ - INFO - Loading extensions...
+2026-05-09 18:14:15,916 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 18:14:15,916 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 18:14:16,053 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 18:14:16,053 - __main__ - INFO - Music cog loaded.
+2026-05-09 18:14:16,053 - __main__ - INFO - Syncing slash commands...
+2026-05-09 18:14:16,400 - __main__ - INFO - Slash commands synced.
+2026-05-09 18:14:17,127 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 1dd7f0a67ff47a66a8b82e17b2021955).
+2026-05-09 18:14:19,145 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 18:14:19,145 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 18:14:19,146 - __main__ - INFO - Bot is ready!
+2026-05-09 18:14:43,541 - cogs.music - ERROR - Ошибка в play: 'Playable' object has no attribute 'duration'
+2026-05-09 18:14:44,207 - TrackException - ERROR - A Lavalink TrackException was received on Node(identifier=9iJ_ukLsrtnAT7KX, uri=http://localhost:2333, status=NodeStatus.CONNECTED, players=1) for player <wavelink.player.Player object at 0x000001D1951DA510>: Something broke when playing the track., caused by: java.lang.IllegalStateException: Must find action functions from script: /s/player/8fb635c2/player_embed.vflset/ru_RU/base.js, with severity: fault
+2026-05-09 18:18:26,589 - cogs.music - ERROR - Ошибка в play: 'Playable' object has no attribute 'duration'
+2026-05-09 18:19:52,478 - spotipy.client - ERROR - HTTP Error for GET to https://api.spotify.com/v1/tracks/5Cav2Lt9Cj2z2i8YazrLGr with Params: {'market': None} returned 403 due to Active premium subscription required for the owner of the app. When the subscription status changes, it can take a few hours before requests are allowed again.
+2026-05-09 18:19:52,479 - utils.spotify - ERROR - Failed to fetch Spotify track: http status: 403, code: -1 - https://api.spotify.com/v1/tracks/5Cav2Lt9Cj2z2i8YazrLGr:
+ Active premium subscription required for the owner of the app. When the subscription status changes, it can take a few hours before requests are allowed again., reason: None
+2026-05-09 18:23:46,532 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 18:31:20,883 - discord.client - INFO - logging in using static token
+2026-05-09 18:31:21,572 - __main__ - INFO - Loading extensions...
+2026-05-09 18:31:21,814 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 18:31:21,814 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 18:31:21,940 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 18:31:21,941 - __main__ - INFO - Music cog loaded.
+2026-05-09 18:31:21,941 - __main__ - INFO - Syncing slash commands...
+2026-05-09 18:31:22,368 - __main__ - INFO - Slash commands synced.
+2026-05-09 18:31:23,259 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 472c778cc8e570854f66f19f698b5437).
+2026-05-09 18:31:25,268 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 18:31:25,268 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 18:31:25,268 - __main__ - INFO - Bot is ready!
+2026-05-09 18:31:52,159 - cogs.music - ERROR - Ошибка в play: Failed to Load Tracks: error=Something went wrong while looking up the track., severity=fault, cause=com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something went wrong while looking up the track.
+2026-05-09 18:32:58,657 - cogs.music - ERROR - Ошибка в play: 'Playable' object has no attribute 'duration'
+2026-05-09 18:34:33,130 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 18:39:43,102 - discord.client - INFO - logging in using static token
+2026-05-09 18:39:43,875 - __main__ - INFO - Loading extensions...
+2026-05-09 18:39:53,242 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 18:39:53,242 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 18:39:53,645 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 18:39:53,645 - __main__ - INFO - Music cog loaded.
+2026-05-09 18:39:53,646 - __main__ - INFO - Syncing slash commands...
+2026-05-09 18:39:54,083 - __main__ - INFO - Slash commands synced.
+2026-05-09 18:39:55,094 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: b38c06092e46a14170901e0c63dd3a1b).
+2026-05-09 18:40:00,849 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 18:40:00,849 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 18:40:00,850 - __main__ - INFO - Bot is ready!
+2026-05-09 18:41:16,787 - cogs.music - ERROR - Ошибка в play: Failed to Load Tracks: error=Something went wrong while looking up the track., severity=fault, cause=com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something went wrong while looking up the track.
+2026-05-09 18:45:26,531 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 18:49:46,204 - discord.client - INFO - logging in using static token
+2026-05-09 18:49:47,133 - __main__ - INFO - Loading extensions...
+2026-05-09 18:49:51,169 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 18:49:51,169 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 18:49:51,530 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 18:49:51,530 - __main__ - INFO - Music cog loaded.
+2026-05-09 18:49:51,531 - __main__ - INFO - Syncing slash commands...
+2026-05-09 18:49:51,841 - __main__ - INFO - Slash commands synced.
+2026-05-09 18:49:52,556 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 8fac31ca6ee8c65a035801c55b7be880).
+2026-05-09 18:49:54,570 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 18:49:54,571 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 18:49:54,572 - __main__ - INFO - Bot is ready!
+2026-05-09 18:51:00,411 - cogs.music - ERROR - Ошибка в play: Failed to Load Tracks: error=Something went wrong while looking up the track., severity=fault, cause=com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something went wrong while looking up the track.
+2026-05-09 18:51:49,777 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 18:57:33,709 - discord.client - INFO - logging in using static token
+2026-05-09 18:57:34,595 - __main__ - INFO - Loading extensions...
+2026-05-09 18:57:34,846 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 18:57:34,847 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 18:57:35,013 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 18:57:35,013 - __main__ - INFO - Music cog loaded.
+2026-05-09 18:57:35,013 - __main__ - INFO - Syncing slash commands...
+2026-05-09 18:57:35,336 - __main__ - INFO - Slash commands synced.
+2026-05-09 18:57:36,148 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 002e3d46082a64e86982fe8176486cdd).
+2026-05-09 18:57:38,160 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 18:57:38,160 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 18:57:38,160 - __main__ - INFO - Bot is ready!
+2026-05-09 18:58:21,396 - cogs.music - ERROR - Ошибка в play: Failed to Load Tracks: error=Something went wrong while looking up the track., severity=fault, cause=com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something went wrong while looking up the track.
+2026-05-09 19:03:16,771 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 19:09:27,092 - discord.client - INFO - logging in using static token
+2026-05-09 19:09:27,906 - __main__ - INFO - Loading extensions...
+2026-05-09 19:09:31,982 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 19:09:31,982 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 19:09:32,203 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 19:09:32,203 - __main__ - INFO - Music cog loaded.
+2026-05-09 19:09:32,204 - __main__ - INFO - Syncing slash commands...
+2026-05-09 19:09:32,519 - __main__ - INFO - Slash commands synced.
+2026-05-09 19:09:33,386 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: ad198edfc36f4c3f9abda1629605798f).
+2026-05-09 19:09:35,390 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 19:09:35,391 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 19:09:35,391 - __main__ - INFO - Bot is ready!
+2026-05-09 19:10:19,401 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 19:10:44,174 - discord.client - INFO - logging in using static token
+2026-05-09 19:10:44,869 - __main__ - INFO - Loading extensions...
+2026-05-09 19:10:45,113 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 19:10:45,114 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 19:10:45,256 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 19:10:45,256 - __main__ - INFO - Music cog loaded.
+2026-05-09 19:10:45,256 - __main__ - INFO - Syncing slash commands...
+2026-05-09 19:10:45,630 - __main__ - INFO - Slash commands synced.
+2026-05-09 19:10:46,417 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 30e6b4cd384f8f6ee7db846187939600).
+2026-05-09 19:10:48,425 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 19:10:48,426 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 19:10:48,426 - __main__ - INFO - Bot is ready!
+2026-05-09 19:11:36,344 - cogs.music - ERROR - Ошибка в play: Failed to Load Tracks: error=Something went wrong while looking up the track., severity=fault, cause=com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something went wrong while looking up the track.
+2026-05-09 19:11:40,997 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 19:17:10,297 - discord.client - INFO - logging in using static token
+2026-05-09 19:17:11,165 - __main__ - INFO - Loading extensions...
+2026-05-09 19:17:11,436 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 19:17:11,436 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 19:17:11,586 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 19:17:11,586 - __main__ - INFO - Music cog loaded.
+2026-05-09 19:17:11,586 - __main__ - INFO - Syncing slash commands...
+2026-05-09 19:17:11,972 - __main__ - INFO - Slash commands synced.
+2026-05-09 19:17:12,712 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 26df1f1ad530b00e49d88fb234c6c358).
+2026-05-09 19:17:14,744 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 19:17:14,745 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 19:17:14,745 - __main__ - INFO - Bot is ready!
+2026-05-09 19:17:30,329 - cogs.music - ERROR - Ошибка в play: 'Playable' object has no attribute 'duration'
+2026-05-09 19:17:31,022 - TrackException - ERROR - A Lavalink TrackException was received on Node(identifier=p0Agq6znzR-VfnM4, uri=http://localhost:2333, status=NodeStatus.CONNECTED, players=1) for player <wavelink.player.Player object at 0x00000154CC55A510>: Something broke when playing the track., caused by: java.lang.IllegalStateException: Must find action functions from script: /s/player/8fb635c2/player_embed.vflset/ru_RU/base.js, with severity: fault
+2026-05-09 19:18:09,019 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 19:21:41,104 - discord.client - INFO - logging in using static token
+2026-05-09 19:21:41,881 - __main__ - INFO - Loading extensions...
+2026-05-09 19:21:42,134 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 19:21:42,135 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 19:21:42,301 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 19:21:42,301 - __main__ - INFO - Music cog loaded.
+2026-05-09 19:21:42,301 - __main__ - INFO - Syncing slash commands...
+2026-05-09 19:21:42,622 - __main__ - INFO - Slash commands synced.
+2026-05-09 19:21:43,515 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 93b02c0aed3d13e354c91456bed3abe5).
+2026-05-09 19:21:45,530 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 19:21:45,530 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 19:21:45,531 - __main__ - INFO - Bot is ready!
+2026-05-09 19:22:02,762 - cogs.music - ERROR - Ошибка в play: 'Playable' object has no attribute 'duration'
+2026-05-09 19:24:02,976 - cogs.music - ERROR - Ошибка в play: 'Playable' object has no attribute 'duration'
+2026-05-09 19:24:52,127 - cogs.music - ERROR - Ошибка в play: 'Playable' object has no attribute 'duration'
+2026-05-09 19:25:53,955 - cogs.music - ERROR - Ошибка в play: 'Playable' object has no attribute 'duration'
+2026-05-09 19:30:11,383 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 19:32:15,571 - discord.client - INFO - logging in using static token
+2026-05-09 19:32:16,344 - __main__ - INFO - Loading extensions...
+2026-05-09 19:32:23,418 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 19:32:23,418 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 19:32:23,703 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 19:32:23,705 - __main__ - INFO - Music cog loaded.
+2026-05-09 19:32:23,705 - __main__ - INFO - Syncing slash commands...
+2026-05-09 19:32:24,140 - __main__ - INFO - Slash commands synced.
+2026-05-09 19:32:25,290 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 28f49a742bfbb79b6685364c79d340e2).
+2026-05-09 19:32:27,298 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 19:32:27,298 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 19:32:27,299 - __main__ - INFO - Bot is ready!
+2026-05-09 19:33:02,994 - cogs.music - ERROR - Ошибка в play: 'Playable' object has no attribute 'duration'
+2026-05-09 19:33:56,074 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 19:40:28,702 - discord.client - INFO - logging in using static token
+2026-05-09 19:40:30,380 - __main__ - INFO - Loading extensions...
+2026-05-09 19:40:35,309 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 19:40:35,310 - cogs.music - INFO - Spotify integration is ready!
+2026-05-09 19:40:35,814 - cogs.music - INFO - Wavelink initialized and connected to Lavalink.
+2026-05-09 19:40:35,814 - __main__ - INFO - Music cog loaded.
+2026-05-09 19:40:35,814 - __main__ - INFO - Syncing slash commands...
+2026-05-09 19:40:36,882 - __main__ - INFO - Slash commands synced.
+2026-05-09 19:40:37,645 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 9484c8af51674abd8500704e1db86a1b).
+2026-05-09 19:40:39,663 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 19:40:42,751 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 19:40:42,751 - __main__ - INFO - Bot is ready!
+2026-05-09 19:41:15,971 - cogs.music - ERROR - Ошибка в play: 'Playable' object has no attribute 'duration'
+2026-05-09 19:44:03,181 - cogs.music - ERROR - Ошибка в play: 'Playable' object has no attribute 'duration'
+2026-05-09 19:52:49,645 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 19:54:18,002 - discord.client - INFO - logging in using static token
+2026-05-09 19:54:19,203 - __main__ - INFO - Loading extensions...
+2026-05-09 19:54:20,843 - cogs.music - INFO - Wavelink готов
+2026-05-09 19:54:20,843 - __main__ - INFO - Music cog loaded.
+2026-05-09 19:54:20,843 - __main__ - INFO - Syncing slash commands...
+2026-05-09 19:54:21,189 - __main__ - INFO - Slash commands synced.
+2026-05-09 19:54:22,005 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: c56241289e7a81ddf4bfce40730f5722).
+2026-05-09 19:54:24,019 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 19:54:24,019 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 19:54:24,019 - __main__ - INFO - Bot is ready!
+2026-05-09 19:55:47,091 - discord.client - ERROR - Ignoring exception in on_wavelink_track_end
+Traceback (most recent call last):
+  File "C:\Users\fizss\AppData\Roaming\Python\Python314\site-packages\discord\client.py", line 508, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\fizss\Documents\vs projects\FimozBot\cogs\music.py", line 154, in on_wavelink_track_end
+    if payload.reason not in (wavelink.TrackEndReason.STOPPED, wavelink.TrackEndReason.REPLACED):
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'wavelink' has no attribute 'TrackEndReason'
+2026-05-09 19:56:36,723 - __main__ - INFO - Bot shutdown by user.
+2026-05-09 20:00:33,005 - discord.client - INFO - logging in using static token
+2026-05-09 20:00:33,808 - __main__ - INFO - Loading extensions...
+2026-05-09 20:00:37,586 - utils.spotify - INFO - SpotifyAPI client initialized successfully.
+2026-05-09 20:00:37,586 - cogs.music - INFO - Spotify готов
+2026-05-09 20:00:37,820 - cogs.music - INFO - Wavelink подключён
+2026-05-09 20:00:37,821 - __main__ - INFO - Music cog loaded.
+2026-05-09 20:00:37,821 - __main__ - INFO - Syncing slash commands...
+2026-05-09 20:00:38,143 - __main__ - INFO - Slash commands synced.
+2026-05-09 20:00:38,967 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: c9d8e95a44de1d028d29172efafbf107).
+2026-05-09 20:00:40,976 - __main__ - INFO - Logged in as FimozBot (ID: 1502588998630248539)
+2026-05-09 20:00:40,976 - __main__ - INFO - Connected to 1 guilds
+2026-05-09 20:00:40,977 - __main__ - INFO - Bot is ready!
+2026-05-09 20:11:33,403 - __main__ - INFO - Bot shutdown by user.

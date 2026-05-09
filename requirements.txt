@@ -1,0 +1,20 @@
+# Core Discord Library
+discord.py>=2.3.2,<3.0.0
+
+# Lavalink Wrapper and Extras
+wavelink>=3.3.0,<4.0.0
+pytz>=2024.1
+PyNaCl>=1.5.0
+
+# Spotify Integration
+spotipy>=2.23.0,<3.0.0
+
+# YouTube/Source Extraction and Utility
+yt-dlp>=2024.7.25
+async-timeout>=4.0.3
+
+# Environment and Configuration
+python-dotenv>=1.0.0,<2.0.0
+
+# Logging and Formatting
+colorama>=0.4.6
