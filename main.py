@@ -6,12 +6,16 @@ import os
 import asyncio
 from dotenv import load_dotenv
 
+# Ensure log directory exists before configuring logging
+LOG_DIR = os.path.join(os.getcwd(), "logs")
+os.makedirs(LOG_DIR, exist_ok=True)
+
 # Configure advanced logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("logs/bot.log"),
+        logging.FileHandler(os.path.join(LOG_DIR, "bot.log")),
         logging.StreamHandler(sys.stdout)
     ]
 )
