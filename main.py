@@ -41,7 +41,8 @@ class MusicBot(commands.Bot):
             "SPOTIFY_CLIENT_SECRET": os.getenv("SPOTIFY_CLIENT_SECRET"),
             "LAVALINK_HOST": os.getenv("LAVALINK_HOST", "localhost"),
             "LAVALINK_PORT": int(os.getenv("LAVALINK_PORT", 2333)),
-            "LAVALINK_PASSWORD": os.getenv("LAVALINK_PASSWORD")
+            "LAVALINK_PASSWORD": os.getenv("LAVALINK_PASSWORD"),
+            "PLAYLIST_STORE_PATH": os.getenv("PLAYLIST_STORE_PATH", "config/playlists.json"),
         }
         
     async def setup_hook(self):

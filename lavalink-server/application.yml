@@ -1,35 +1,54 @@
 server:
   port: 2333
-  address: 0.0.0.0
+  address: 127.0.0.1
 
 plugins:
-    dir: ./plugins
+  dir: ./plugins                           
 
 lavalink:
   server:
-    password: "A6xHk705Ssa19732819"
+    password: "YOUR_LAVALINK_PASSWORD_HERE"
     sources:
-      youtube: false
-      soundcloud: true
+      youtube: false                       
+      soundcloud: true                     
     bufferDurationMs: 400
     frameBufferDurationMs: 5000
     youtubePlaylistLoadLimit: 6
     playerUpdateInterval: 5
-    youtubeSearchEnabled: false
-    soundcloudSearchEnabled: true
+    # youtubeSearchEnabled: false          
+    # soundcloudSearchEnabled: true        
     gc-warnings: true
     trackStuckThresholdMs: 30000
 
+# ========== НАСТРОЙКИ ПЛАГИНА YOUTUBE ==========
 youtube:
   enabled: true
   search: true
   clients:
-    - ANDROID_TESTSUITE
-    - MUSIC
+    - ANDROID_TESTSUITE                    # основной рабочий клиент
+    - MUSIC                                # бэкап
     - WEB
     - WEBEMBEDDED
     - TVHTML5EMBEDDED
     - IOS
+
+# ========== НАСТРОЙКИ LAVASRC (Spotify, Deezer, Apple Music и др.) ==========
+lavasrc:
+  sources:
+    spotify: true
+    deezer: true
+    applemusic: true
+  spotify:
+    clientId: "YOUR_SPOTIFY_CLIENT_ID"    
+    clientSecret: "YOUR_SPOTIFY_CLIENT_SECRET"
+    countryCode: "US"
+  deezer:
+    masterDecipherKey: "YOUR_DEEZER_KEY"
+  applemusic:
+    countryCode: "US"
+    # для Apple Music можно указать credentials (если нужны)
+    # developerToken: "..."
+    # userToken: "..."
 
 logging:
   file:
@@ -39,4 +58,4 @@ logging:
   level:
     root: INFO
     lavalink: INFO
-    dev.lavalink.youtube: DEBUG
+    dev.lavalink.youtube: DEBUG           

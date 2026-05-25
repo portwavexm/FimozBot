@@ -1,0 +1,38 @@
+﻿**********************
+Начало записи сценария Windows PowerShell
+Время начала: 20260524220909
+Имя пользователя: KILLMASZ\fizss
+Запуск от имени пользователя: KILLMASZ\fizss
+Имя конфигурации: 
+Компьютер: KILLMASZ (Microsoft Windows NT 10.0.26100.0)
+Ведущее приложение: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\start_bot.ps1 -NoLavalink
+ИД процесса: 5452
+PSVersion: 5.1.26100.1591
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.1591
+BuildVersion: 10.0.26100.1591
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+No virtualenv activation script found; running system Python.
+PS>TerminatingError(Out-File): "Процесс не может получить доступ к файлу "C:\Users\fizss\Documents\vs projects\FimozBot\logs\start_bot_20260524_220909.log", так как этот файл используется другим процессом."
+>> TerminatingError(Out-File): "Процесс не может получить доступ к файлу "C:\Users\fizss\Documents\vs projects\FimozBot\logs\start_bot_20260524_220909.log", так как этот файл используется другим процессом."
+>> TerminatingError(Out-File): "Процесс не может получить доступ к файлу "C:\Users\fizss\Documents\vs projects\FimozBot\logs\start_bot_20260524_220909.log", так как этот файл используется другим процессом."
+Процесс не может получить доступ к файлу "C:\Users\fizss\Documents\vs projects\FimozBot\logs\start_bot_20260524_220909.log", так как этот файл используется другим процессом.
+Out-File : Процесс не может получить доступ к файлу
+"C:\Users\fizss\Documents\vs
+projects\FimozBot\logs\start_bot_20260524_220909.log", так как этот файл
+используется другим процессом.
+C:\Users\fizss\Documents\vs projects\FimozBot\start_bot.ps1:42 знак:75
++ ... $m; "$([DateTime]::Now) - $m" | Out-File -FilePath $logFile -Append }
++                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], IOException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.Ou
+   tFileCommand
+
+**********************
+Конец записи протокола Windows PowerShell
+Время окончания: 20260524220910
+**********************

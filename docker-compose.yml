@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  lavalink:
+    image: openjdk:17-jdk-slim
+    working_dir: /app
+    volumes:
+      - ./lavalink-server:/app
+    command: sh -c "java -jar Lavalink.jar"
+    ports:
+      - "2333:2333"
+    restart: unless-stopped
+
+  bot:
+    build: .
+    depends_on:
+      - lavalink
+    environment:
+      - LAVALINK_HOST=lavalink
+    volumes:
+      - ./:/app
+    restart: unless-stopped
