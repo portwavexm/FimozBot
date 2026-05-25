@@ -5,6 +5,7 @@ Features:
 - logging to logs/start_bot_YYYYMMDD_HHMMSS.log
 - options: --NoLavalink, --LavalinkOnly, --PlaylistStore
 - optional auto-restart on non-zero exit
+- First run: option to add to Windows startup
 Usage (PowerShell):
   .\start_bot.ps1 -AutoRestart -PlaylistStore "config/playlists.json"
 Run with execution policy bypass if needed:
@@ -47,6 +48,63 @@ function Write-Log {
     } catch {
         Write-Host "Warning: failed to write to log file ($logFile)." -ForegroundColor Yellow
     }
+}
+
+# File to track if first run setup has been done
+$firstRunMarker = Join-Path $scriptDir '.first_run_done'
+
+# First run setup - offer autostart
+if (-not (Test-Path $firstRunMarker)) {
+    Write-Log "===== FIRST RUN SETUP ====="
+    Write-Host ""
+    Write-Host "FimozBot - First Run Setup" -ForegroundColor Cyan
+    Write-Host "=" * 40
+    Write-Host ""
+    
+    $response = Read-Host "Would you like to add FimozBot to Windows startup? (Y/N)"
+    
+    if ($response -eq 'Y' -or $response -eq 'y') {
+        try {
+            # Create shortcut in Startup folder
+            $startupFolder = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Startup'))
+            $shortcutPath = Join-Path $startupFolder 'FimozBot.lnk'
+            
+            # PowerShell command to run the bot
+            $botCommand = "powershell -ExecutionPolicy Bypass -NoProfile -WindowStyle Hidden -File `"$PSCommandPath`""
+            
+            # Create WScript.Shell COM object
+            $shell = New-Object -ComObject WScript.Shell
+            $shortcut = $shell.CreateShortcut($shortcutPath)
+            $shortcut.TargetPath = 'powershell.exe'
+            $shortcut.Arguments = "-ExecutionPolicy Bypass -NoProfile -WindowStyle Hidden -File `"$PSCommandPath`""
+            $shortcut.WorkingDirectory = $scriptDir
+            $shortcut.IconLocation = "powershell.exe,0"
+            $shortcut.Description = "FimozBot - Discord Music Bot"
+            $shortcut.Save()
+            
+            Write-Log "Autostart shortcut created at: $shortcutPath"
+            Write-Host "✓ Autostart enabled! Bot will start with Windows." -ForegroundColor Green
+        } catch {
+            Write-Log "ERROR: Failed to create autostart shortcut: $_"
+            Write-Host "✗ Failed to enable autostart: $_" -ForegroundColor Red
+        }
+    } else {
+        Write-Log "User declined autostart setup."
+        Write-Host "✓ Autostart skipped." -ForegroundColor Yellow
+    }
+    
+    # Create marker file
+    try {
+        New-Item -ItemType File -Path $firstRunMarker -Force | Out-Null
+        Write-Log "First run setup completed."
+    } catch {
+        Write-Log "Warning: Could not create first run marker: $_"
+    }
+    
+    Write-Host ""
+    Write-Host "Setup complete. Starting bot..." -ForegroundColor Green
+    Write-Host ""
+    Start-Sleep -Seconds 2
 }
 
 # Create and/or activate virtualenv
