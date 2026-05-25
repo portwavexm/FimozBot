@@ -4,8 +4,8 @@ setlocal
 
 set "PYRUN=%~dp0run.py"
 if exist "%PYRUN%" (
-    if exist "%~systemroot%\py.exe" (
-        py "%PYRUN%" %*
+    if exist "%SystemRoot%\py.exe" (
+        "%SystemRoot%\py.exe" "%PYRUN%" %*
     ) else (
         python "%PYRUN%" %*
     )
