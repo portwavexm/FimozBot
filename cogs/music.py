@@ -779,6 +779,7 @@ class Music(commands.Cog):
         self.last_channels:        dict[int, discord.TextChannel] = {}
         self.last_requesters:      dict[int, discord.Member]      = {}
         self.now_playing_messages: dict[int, discord.Message]     = {}
+        self._track_watchers:      dict[int, asyncio.Task]       = {}
 
     async def cog_load(self):
         sp_id     = self.bot.config.get("SPOTIFY_CLIENT_ID")
@@ -867,6 +868,14 @@ class Music(commands.Cog):
             return [results[0]]
         return [results]
 
+    async def _defer_interaction(self, interaction: discord.Interaction, *, ephemeral: bool = False) -> None:
+        if getattr(interaction.response, "is_done", lambda: False)():
+            return
+        if ephemeral:
+            await interaction.response.defer(ephemeral=True)
+            return
+        await interaction.response.defer()
+
     async def _build_track_label(self, query: str) -> str:
         if self.spotify_api and await self.spotify_api.is_spotify_url(query):
             tracks_data, typ = await self.spotify_api.process_url(query)
@@ -878,22 +887,107 @@ class Music(commands.Cog):
         except Exception:
             return query
 
+    @staticmethod
+    def _track_is_active(player: wavelink.Player, track: wavelink.Playable | None) -> bool:
+        if track is None:
+            return False
+
+        current = getattr(player, "current", None)
+        if current is track:
+            return bool(getattr(player, "playing", False))
+
+        current_id = getattr(current, "identifier", None)
+        track_id = getattr(track, "identifier", None)
+        return bool(current_id and track_id and current_id == track_id and getattr(player, "playing", False))
+
+    async def _play_candidate(self, player: wavelink.Player, track: wavelink.Playable) -> bool:
+        label = getattr(track, "title", None) or getattr(track, "uri", None) or getattr(track, "identifier", None) or "unknown"
+        try:
+            await asyncio.wait_for(player.play(track), timeout=10)
+        except asyncio.TimeoutError:
+            log.warning("Старт следующего трека превысил таймаут.")
+            raise
+        except Exception as e:
+            log.warning(f"Пропущен сломанный трек {label}: {e}")
+            return False
+
+        for _ in range(5):
+            if self._track_is_active(player, track):
+                return True
+            await asyncio.sleep(0.2)
+
+        log.warning(f"Трек не запустился, пропускаю: {label}")
+        return False
+
     async def _start_playback_if_idle(self, player: wavelink.Player) -> None:
         if player.playing:
             return
 
-        if not player.queue:
+        while True:
+            if not player.queue:
+                return
+
+            next_track = player.queue.get()
+            if next_track is None:
+                return
+
+            if await self._play_candidate(player, next_track):
+                return
+
+    def _cancel_track_watcher(self, guild_id: int) -> None:
+        task = self._track_watchers.pop(guild_id, None)
+        if task and not task.done():
+            task.cancel()
+
+    def _start_track_watcher(self, player: wavelink.Player) -> None:
+        track = getattr(player, "current", None)
+        if track is None:
             return
 
-        next_track = player.queue.get()
-        if next_track is None:
-            return
+        self._cancel_track_watcher(player.guild.id)
+        self._track_watchers[player.guild.id] = asyncio.create_task(
+            self._watch_stalled_track(player, track)
+        )
 
+    async def _watch_stalled_track(self, player: wavelink.Player, track: wavelink.Playable) -> None:
         try:
-            await asyncio.wait_for(player.play(next_track), timeout=10)
-        except asyncio.TimeoutError:
-            log.warning("Старт следующего трека превысил таймаут.")
-            raise
+            await asyncio.sleep(12)
+            last_position = getattr(player, "position", 0) or 0
+            last_change = asyncio.get_running_loop().time()
+
+            while True:
+                if player.guild.id not in self._track_watchers:
+                    return
+
+                current = getattr(player, "current", None)
+                if current is not track or not player.playing or player.paused:
+                    return
+
+                position = getattr(player, "position", 0) or 0
+                if position != last_position:
+                    last_position = position
+                    last_change = asyncio.get_running_loop().time()
+                elif asyncio.get_running_loop().time() - last_change >= 15:
+                    log.warning(f"Трек зависает, пропускаю: {track.title or track.uri or track.identifier}")
+                    channel = self.last_channels.get(player.guild.id)
+                    if channel:
+                        try:
+                            await channel.send(embed=embed_error("Трек не воспроизводится, пропускаю..."))
+                        except Exception:
+                            pass
+                    try:
+                        await player.stop()
+                    except Exception:
+                        pass
+                    try:
+                        await self._advance_player(player)
+                    except Exception as e:
+                        log.warning(f"Не удалось пропустить зависший трек: {e}")
+                    return
+
+                await asyncio.sleep(5)
+        except asyncio.CancelledError:
+            return
 
     async def _has_pending_track(self, player: wavelink.Player) -> bool:
         return bool(player.queue) or getattr(player, "current", None) is not None
@@ -911,17 +1005,14 @@ class Music(commands.Cog):
         except Exception:
             pass
 
-        next_track = player.queue.get()
-        if next_track is None:
-            return False
+        while True:
+            next_track = player.queue.get()
+            if next_track is None:
+                await player.stop()
+                return False
 
-        try:
-            await asyncio.wait_for(player.play(next_track), timeout=10)
-        except asyncio.TimeoutError:
-            log.warning("Переход к следующему треку превысил таймаут.")
-            raise
-
-        return True
+            if await self._play_candidate(player, next_track):
+                return True
 
     async def _enqueue_query_list(self, player: wavelink.Player, queries: list[str]) -> tuple[int, list[str]]:
         added = 0
@@ -971,6 +1062,8 @@ class Music(commands.Cog):
         channel   = self.last_channels.get(player.guild.id)
         requester = self.last_requesters.get(player.guild.id)
 
+        self._start_track_watcher(player)
+
         # Убираем кнопки с предыдущего сообщения
         old_msg = self.now_playing_messages.pop(player.guild.id, None)
         if old_msg:
@@ -995,6 +1088,8 @@ class Music(commands.Cog):
         if not player:
             return
 
+        self._cancel_track_watcher(player.guild.id)
+
         if not player.playing and await self._has_pending_track(player):
             try:
                 await self._start_playback_if_idle(player)
@@ -1016,6 +1111,8 @@ class Music(commands.Cog):
         player  = payload.player
         channel = self.last_channels.get(player.guild.id)
         log.error(f"Track exception: {payload.exception}")
+        self._cancel_track_watcher(player.guild.id)
+
         if channel:
             try:
                 await channel.send(embed=embed_error("Ошибка воспроизведения трека, пропускаю..."))
@@ -1028,8 +1125,20 @@ class Music(commands.Cog):
             log.error(f"Не удалось перейти к следующему треку после ошибки: {e}", exc_info=True)
 
     @commands.Cog.listener()
+    async def on_wavelink_track_stuck(self, payload):
+        """Если трек не продвигается, пропускаем его и переходим дальше."""
+        player = payload.player
+        log.warning("Трек застрял, пропускаю следующий доступный трек.")
+        self._cancel_track_watcher(player.guild.id)
+        try:
+            await self._advance_player(player)
+        except Exception as e:
+            log.error(f"Не удалось перейти к следующему треку после зависания: {e}", exc_info=True)
+
+    @commands.Cog.listener()
     async def on_wavelink_inactive_player(self, player: wavelink.Player):
         """Плеер неактивен — отключаемся."""
+        self._cancel_track_watcher(player.guild.id)
         await player.disconnect()
         self.last_channels.pop(player.guild.id, None)
         self.last_requesters.pop(player.guild.id, None)
@@ -1039,7 +1148,7 @@ class Music(commands.Cog):
     @app_commands.command(name="play", description="Воспроизвести музыку (YouTube, SoundCloud, Spotify)")
     @app_commands.describe(query="Название трека, ссылка или Spotify URL")
     async def play(self, interaction: discord.Interaction, query: str):
-        await interaction.response.defer()
+        await self._defer_interaction(interaction)
         try:
             player = await self._get_player(interaction)
             self.last_channels[interaction.guild.id]   = interaction.channel
@@ -1164,7 +1273,7 @@ class Music(commands.Cog):
     @playlist.command(name="play", description="Воспроизвести сохранённый плейлист")
     @app_commands.describe(name="Название плейлиста")
     async def playlist_play(self, interaction: discord.Interaction, name: str):
-        await interaction.response.defer()
+        await self._defer_interaction(interaction)
         playlist = self.playlist_store.get_playlist(interaction.guild.id, name)
         if not playlist:
             await interaction.followup.send(embed=embed_error("Плейлист не найден."))
