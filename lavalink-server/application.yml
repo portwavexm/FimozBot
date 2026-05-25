@@ -7,7 +7,7 @@ plugins:
 
 lavalink:
   server:
-    password: "YOUR_LAVALINK_PASSWORD_HERE"
+    password: "2765489Sas"
     sources:
       youtube: false                       
       soundcloud: true                     
